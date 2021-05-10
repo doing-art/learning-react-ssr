@@ -1,7 +1,7 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -32,10 +32,10 @@ const config = {
     ]
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      template: "./index.html",
-      inject: "body"
-    }),
+    // new HTMLWebpackPlugin({
+    //   template: "./index.html",
+    //   inject: "body"
+    // }),
     // new CopyWebpackPlugin({
     //   patterns: [
     //     {
