@@ -8,7 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack",
     "watch": "cross-env NODE_ENV=development webpack --watch",
     "start": "cross-env NODE_ENV=development webpack serve --hot",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
+    "start:ssr": "node server"
   },
   "repository": {
     "type": "git",
@@ -23,16 +24,18 @@
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
-    "@babel/preset-typescript": "^7.13.0",
+    "@babel/register": "^7.13.16",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.2",
     "html-webpack-plugin": "^5.3.1",
+    "ignore-styles": "^5.0.1",
     "mini-css-extract-plugin": "^1.5.0",
     "node-sass": "^5.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
@@ -46,7 +49,9 @@
   },
   "dependencies": {
     "core-js": "^3.11.0",
+    "express": "^4.17.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
   }
 }

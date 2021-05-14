@@ -15,7 +15,7 @@ const config = {
   mode: process.env.NODE_ENV,
   devtool: isDev ? "source-map" : undefined,
   entry: {
-    main: "./index.js"
+    main: isDev ? "./index.dev.js" : "./index.prod.js"
   },
   output: {
     filename: "[name].js?[fullhash]",

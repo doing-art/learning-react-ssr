@@ -1,1 +1,3 @@
-export { default } from './Counter';
+import Counter from './Counter';
+
+export default Counter;
